@@ -20,13 +20,15 @@ public class CaesarsCipher{
     public void setShift(int shift) {
         this.shift = shift;
     }
-    
-    // method that ciphers and deciphers the text
-    public static String caesarCipher(String text, int shift) {
 
+    // method that ciphers and deciphers the text
+    public String caesarCipher(String message, int shift) {
+        // initializing the class attributes
+        this.message = message;
+        this.shift = shift;
         StringBuilder result = new StringBuilder();
         // loop through each character in the text
-        for (char c : text.toCharArray()) {
+        for (char c : message.toCharArray()) {
             // if the character is an uppercase letter
             if (Character.isUpperCase(c)) {
                 // shift the character by the shift amount
